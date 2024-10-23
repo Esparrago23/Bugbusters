@@ -1,12 +1,7 @@
 import { dAppContext } from '@/Context/dappContext';
 import { useSailsCalls } from '@/app/hooks';
-import {
-    NormalButtons,
-    SignlessButtons,
-    VoucherButtons,
-} from '@/components/ExampleComponents';
+import Sidebar from '@/components/Sidebar/Sidebar';
 import { Header } from "@/components/layout";
-import { Button } from '@/components/ui/button';
 import { useAccount } from '@gear-js/react-hooks';
 import { useContext, useEffect, useState } from 'react';
 import "./examples.css";
@@ -37,7 +32,13 @@ function Home() {
     return (
         <>
             <Header isAccountVisible={isAccountReady} />
-            <div className='examples-container'>
+            <Sidebar></Sidebar>
+        </>
+    );
+}
+
+export { Home };
+            /*<div className='examples-container'>
                 <div className='examples'>
                     <div className='information'>
                         <p>
@@ -94,10 +95,5 @@ function Home() {
                         )
                     }
                 </div>
-            </div>
-        </>
-    );
-}
-
-export { Home };
+            </div>*/
 
