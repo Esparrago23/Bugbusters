@@ -1,13 +1,25 @@
-type HijoProps = {
-    mensaje: string; // Define el tipo de la prop
-    placeholder: string;
-  };
- const FieldForm: React.FC<HijoProps> = ({ mensaje, placeholder }) => {
-  return (
-    <label className="w-full"  htmlFor=""> {mensaje}: <input placeholder={placeholder} className="w-full placeholder:text-[#439775]/60 rounded-lg bg-green-200 p-2 " type="text" /></label>
-  )
+import React from 'react';
+
+interface FieldFormProps {
+  placeholder: string;
+  mensaje: string;
+  value?: string; // El valor controlado del input
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // Manejador de cambios
 }
-export default FieldForm
 
+const FieldForm: React.FC<FieldFormProps> = ({ placeholder, mensaje, value, onChange }) => {
+  return (
+    <div className="flex flex-col w-full mb-4">
+      <label className="text-gray-700 mb-2">{mensaje}</label>
+      <input
+        type="text"
+        placeholder={placeholder}
+        className="border border-gray-300 p-2 rounded-lg w-full"
+        value={value} // El valor del input se controla desde el estado del padre
+        onChange={onChange} // Llamamos a la función onChange cuando el usuario escribe
+      />
+    </div>
+  );
+};
 
-
+export default FieldForm;
