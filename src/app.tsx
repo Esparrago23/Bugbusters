@@ -1,12 +1,13 @@
-import { useAccount, useApi } from "@gear-js/react-hooks";
+import { withProviders } from "@/app/hocs";
 import { ApiLoader } from "@/components";
 import { Header } from "@/components/layout";
-import { withProviders } from "@/app/hocs";
 import { useWalletSync } from "@/features/wallet/hooks";
-import { Routing } from "./pages";
-import { useInitSails } from "./app/hooks";
-import { CONTRACT_DATA, sponsorName, sponsorMnemonic } from "./app/consts";
+import { useAccount, useApi } from "@gear-js/react-hooks";
 import "@gear-js/vara-ui/dist/style.css";
+import { CONTRACT_DATA, sponsorMnemonic, sponsorName } from "./app/consts";
+import { useInitSails } from "./app/hooks";
+import './index.css';
+import { Routing } from "./pages";
 
 function Component() {
   const { isApiReady } = useApi();

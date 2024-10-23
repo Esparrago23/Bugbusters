@@ -1,9 +1,8 @@
-import React from "react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import dotenv from "dotenv";
 import ReactDOM from "react-dom/client";
 import { App } from "./app";
-import dotenv from "dotenv";
-import { ChakraProvider } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
+
 
 // Cargar variables de entorno desde el archivo .env
 dotenv.config();

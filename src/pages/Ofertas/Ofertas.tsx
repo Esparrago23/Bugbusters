@@ -2,8 +2,8 @@
 function Ofertas(): JSX.Element {
   return ( 
     <>
-      <div>
-        Soy ofertas
+      <div className="text-2xl font-bold">
+        Soy ofertas ahxw
       </div>
     </>
   );
