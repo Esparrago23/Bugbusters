@@ -11,7 +11,7 @@ export default function Registro() {
 
   return (
     <div className="w-full h-screen flex font-thin">
-      <div className="w-1/2 flex text-[#439775] items-center justify-center">
+      <div className="lg:w-1/2 md:w-full flex text-[#439775] items-center justify-center">
         <div className="border border-[#439775] w-3/4 rounded-lg h-3/4 justify-between text-center flex flex-col text-3xl p-10">
           <h1>Subástalo</h1>
           <p>¿Quieres participar en subastas a sobre cerrado de artículos de colección?</p>
@@ -20,7 +20,7 @@ export default function Registro() {
           <span>¡Subastalo es para ti!</span>
         </div>
       </div>
-      <div className="w-1/2  bg-[#439775] text-white">
+      <div className="lg:w-1/2 md:w-full  bg-[#439775] text-white">
         <div>
           <span className="w-full h-20 items-center flex justify-end p-5">
             ¿Ya tienes cuenta?
