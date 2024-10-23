@@ -19,7 +19,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="flex justify-evenly bg-gray-200 md:flex-col items-center p-2 md:w-1/5 md:z-[-1] md:fixed md:top-0 md:justify-center md:h-full border rounded-lg">
+    <div className=' flex justify-evenly   md:flex-col items-center p-2 md:w-1/5  md:fixed  md:justify-center  md:h-full '>
       {buttons.map((button, index) => (
         <SideButton
           key={index}
