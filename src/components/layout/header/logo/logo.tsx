@@ -3,8 +3,8 @@ import './logo.module.scss';
 
 function Logo() {
   return (
-    <Link to="/">
-      <h1 id='logo'>Logo</h1>
+    <Link className='' to="/">
+      <img className='w-[50px]' src="/icons8-subasta-100.png" alt="logo" />
     </Link>
   );
 }
