@@ -4,7 +4,7 @@ import './logo.module.scss';
 function Logo() {
   return (
     <Link to="/">
-      <h1 id='logo'>logo</h1>
+      <h1 id='logo'>Logo</h1>
     </Link>
   );
 }
