@@ -1,7 +1,10 @@
-import React from 'react'
 
 export default function Registro() {
   return (
-    <div>Registro</div>
+    <>
+    <div>
+      soy el registro
+    </div>
+    </>
   )
 }

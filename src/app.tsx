@@ -1,8 +1,7 @@
 import { withProviders } from "@/app/hocs";
 import { ApiLoader } from "@/components";
-import { Header } from "@/components/layout";
 import { useWalletSync } from "@/features/wallet/hooks";
-import { useAccount, useApi } from "@gear-js/react-hooks";
+import { useApi } from "@gear-js/react-hooks";
 import "@gear-js/vara-ui/dist/style.css";
 import { CONTRACT_DATA, sponsorMnemonic, sponsorName } from "./app/consts";
 import { useInitSails } from "./app/hooks";
@@ -11,7 +10,6 @@ import { Routing } from "./pages";
 
 function Component() {
   const { isApiReady } = useApi();
-  const { isAccountReady } = useAccount();
 
   // Put your contract id and idl
   useInitSails({
@@ -29,12 +27,11 @@ function Component() {
 
   useWalletSync();
 
-  const isAppReady = isApiReady && isAccountReady;
+  const isAppReady = isApiReady ;
 
   // App with context
   return (
     <>
-      <Header isAccountVisible={isAccountReady} />
       {isAppReady ? <Routing /> : <ApiLoader />}
     </>
   );

@@ -6,7 +6,7 @@ type Props = {
   isAccountVisible: boolean;
 };
 
-export function Header({ isAccountVisible }: Props) {
+/*export function Header({ isAccountVisible }: Props) {
   // const [isMenuOpen] = React.useState(false);
 
   return (
@@ -15,6 +15,17 @@ export function Header({ isAccountVisible }: Props) {
       {isAccountVisible && <MultiWallet/>}
     </header>
   );
+}*/
 
-  
+
+function Header({isAccountVisible}: Props): JSX.Element {
+  return (
+    <header className={styles.header}>
+      <Logo />
+      {isAccountVisible && <MultiWallet/>}
+    </header>
+  );
 }
+
+export { Header };
+

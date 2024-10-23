@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./home";
 import { Landing } from "./Landing";
 import Login from "./Login/Login";
-import { Ofertas } from "./Ofertas/Ofertas";
+import { Ofertas } from "./Ofertas/";
 import Registro from "./Registro/Registro";
 
 const routes = [
