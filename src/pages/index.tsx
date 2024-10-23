@@ -5,10 +5,11 @@ import { Ofertas } from "./Ofertas/";
 import Registro from "./Registro/Registro";
 
 const routes = [
+  { path: "/", Page: Registro }, 
   { path: "/home", Page: Home },
-  { path: "/ofertas", Page: Ofertas }, // Cambiar 'page' a 'Page'
-  { path: "/login", Page: Login },     // Cambiar 'page' a 'Page'
-  { path: "/", Page: Registro } // Cambiar 'page' a 'Page'
+  { path: "/ofertas", Page: Ofertas },
+  { path: "/login", Page: Login },
+  { path: "/usuario", Page: Login } 
 ];
 
 function Routing() {

@@ -1,5 +1,6 @@
 import { dAppContext } from '@/Context/dappContext';
 import { useSailsCalls } from '@/app/hooks';
+import CardSubasta from '@/components/Card/CardSubasta';
 import Sidebar from '@/components/Sidebar/Sidebar';
 import { Header } from "@/components/layout";
 import { useAccount } from '@gear-js/react-hooks';
@@ -8,6 +9,7 @@ import "./examples.css";
 
 function Home() {
     const sails = useSailsCalls();
+    const [ofertas, setOfertas] = useState(["Card1","Card 2","Card 3"])
     const { account } = useAccount();
     const { 
         currentVoucherId,
@@ -32,7 +34,14 @@ function Home() {
     return (
         <>
             <Header isAccountVisible={isAccountReady} />
-            <Sidebar></Sidebar>
+            <div className='w-full sm:flex box-border '>
+                <Sidebar></Sidebar>
+                <div className='p-2 flex flex-col text-center mt-5 justify-center lg:ml-80 sm:ml-60 sm:mr-20 bg-gray-100 w-full md:w-4/5  '>
+                    {
+                        ofertas.length > 0 ? ofertas.map(element=><CardSubasta></CardSubasta>): <h1 className='w-full bg-blue-400'>lista vacia</h1>
+                    }
+                </div>
+            </div>
         </>
     );
 }
