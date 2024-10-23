@@ -36,7 +36,7 @@ function Home() {
             <Header isAccountVisible={isAccountReady} />
             <div className='w-full sm:flex box-border '>
                 <Sidebar></Sidebar>
-                <div className='p-2 flex flex-col text-center mt-5 justify-center lg:ml-80 sm:ml-60 sm:mr-20 bg-gray-100 w-full md:w-4/5  '>
+                <div className='p-2 flex flex-col text-center mt-5 justify-center lg:ml-80 sm:ml-60 sm:mr-20  w-full md:w-4/5  '>
                     {
                         ofertas.length > 0 ? ofertas.map(element=><CardSubasta></CardSubasta>): <h1 className='w-full bg-blue-400'>lista vacia</h1>
                     }

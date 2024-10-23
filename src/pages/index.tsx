@@ -9,7 +9,7 @@ const routes = [
   { path: "/home", Page: Home },
   { path: "/ofertas", Page: Ofertas },
   { path: "/login", Page: Login },
-  { path: "/usuario", Page: Login } 
+  //{ path: "/usuario", Page: Usuario } 
 ];
 
 function Routing() {
