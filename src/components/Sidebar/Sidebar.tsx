@@ -12,16 +12,19 @@ export default function Sidebar() {
 
   // Ejemplo de textos y rutas para cada botón
   const buttons = [
-    { text: 'Configuracion', to: '/usuario' },
-    { text: 'Ofertaste', to: '/ofertaste' },
-    { text: 'Como postor', to: '/como_postor' },
-    { text: 'Subastalo', to : '/subastalo'} // Agrega solo la función para "Subastalo"
+    { text: 'Perfil', to: '/usuario', icon: "/icons8-usuario-de-género-neutro-50.png" },
+    { text: 'Ofertaste', to: '/ofertaste',icon: "/icons8-vender-50.png" },
+    { text: 'Como postor', to: '/como_postor',icon: "/icons8-jactancioso-50.png" },
+    { text: 'Subastalo', to : '/subastalo', icon: "/icons8-subasta-50.png"} // Agrega solo la función para "Subastalo"
   ];
 
   return (
-    <div className=' flex justify-evenly   md:flex-col items-center p-2 md:w-1/5  md:fixed  md:justify-center  md:h-full '>
+    <div className='
+    border-r  border-[#139869] flex   md:flex-col items-center   p-2   
+    md:fixed    md:h-full '>
       {buttons.map((button, index) => (
         <SideButton
+          icon={button.icon}
           key={index}
           text={button.text}
           to={button.to} // Pasar "to" solo si existe

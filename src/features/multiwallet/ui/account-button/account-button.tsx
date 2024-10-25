@@ -13,9 +13,9 @@ const AccountButton = ({ name, address, className, onClick }: Props) => {
   return (
     <button type="button" onClick={onClick}>
       <HStack>
-        <Identicon value={address} size={24} theme="polkadot" />
+        <Identicon value={address} size={24} theme="ethereum" />
         <span style={{ marginLeft: "8px" }}>
-          <Heading size="xs">{name}</Heading>
+          <Heading  size="xs"> {name} </Heading>
         </span>
       </HStack>
     </button>
@@ -23,3 +23,4 @@ const AccountButton = ({ name, address, className, onClick }: Props) => {
 };
 
 export { AccountButton };
+

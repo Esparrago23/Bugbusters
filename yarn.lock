@@ -3493,6 +3493,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gear-js/wallet-connect@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@gear-js/wallet-connect@npm:0.1.2"
+  peerDependencies:
+    "@gear-js/react-hooks": ^0.13.1
+    "@gear-js/ui": ^0.5.28
+    "@gear-js/vara-ui": ^0.0.11
+  peerDependenciesMeta:
+    "@gear-js/ui":
+      optional: true
+    "@gear-js/vara-ui":
+      optional: true
+  checksum: a02cd07c95407256f93ebe59f5413d1e021cd1a2c486c5803a12f09bc86a606a4139a73931576da1f5770ad6e4261f74336556aee758bc4df919dbfc8947646a
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.13
   resolution: "@humanwhocodes/config-array@npm:0.11.13"
@@ -14525,6 +14541,7 @@ __metadata:
     "@gear-js/react-hooks": "npm:0.10.6"
     "@gear-js/ui": "npm:0.5.23"
     "@gear-js/vara-ui": "npm:0.0.7"
+    "@gear-js/wallet-connect": "npm:0.1.2"
     "@mantine/form": "npm:6.0.15"
     "@polkadot/api": "npm:11.0.3"
     "@polkadot/extension-dapp": "npm:0.47.4"

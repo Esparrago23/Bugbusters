@@ -1,31 +1,34 @@
-import { useAccount } from "@gear-js/react-hooks";
-import { Button, buttonStyles } from "@gear-js/ui";
-import { useState } from "react";
-import { AccountsModal } from "../accounts-modal";
-import { AccountButton } from "../account-button";
-import { Balance } from "../balance";
 import { HStack } from "@chakra-ui/react";
-
+import { useAccount } from "@gear-js/react-hooks";
+import { Button } from "@gear-js/ui";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AccountButton } from "../account-button";
+import { AccountsModal } from "../accounts-modal";
+import { Balance } from "../balance";
 const MultiWallet = () => {
   const { account, isAccountReady } = useAccount();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const navigate = useNavigate()
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    
+  }
 
   return (
     <HStack>
       <Balance />
       {isAccountReady &&
         (account ? (
-          <AccountButton
-            name={account.meta.name}
-            address={account.address}
-            onClick={openModal}
-          />
+          <AccountButton name={account.meta.name} address={account.address} onClick={openModal}/>
         ) : (
-          <Button text="Connect" color="primary" onClick={openModal} />
+          <Button text="Login" color="lightGreen" onClick={openModal} />
         ))}
 
       {isModalOpen && <AccountsModal close={closeModal} />}
@@ -34,3 +37,4 @@ const MultiWallet = () => {
 };
 
 export { MultiWallet };
+

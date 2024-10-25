@@ -1,4 +1,12 @@
+import { Link } from "react-router-dom";
+
 function SubastaForm() {
+    function onclick(){
+        alert("Formulario enviado");
+    }
+    function subCancel(){
+        alert("Cancelado");
+    }
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <form className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-full max-w-md">
@@ -52,17 +60,28 @@ function SubastaForm() {
                     />
                 </div>
 
-                <div className="flex items-center justify-center">
-                    <button
+                <div className="flex items-center justify-evenly">
+                    <Link
+                    to={"/home"}
+                    onClick={onclick}
                         className="bg-[#439775] hover:bg-[#139869] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit"
                     >
-                        Subastar
-                    </button>
+                        create auction
+                    </Link>
+                    <Link
+                    to={"/home"}
+                    onClick={subCancel}
+                        className="bg-[#439775] hover:bg-[#139869] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit"
+                    >
+                        Cancel
+                    </Link>
                 </div>
             </form>
         </div>
     );
 }
 
-export {SubastaForm}
+export { SubastaForm };
+

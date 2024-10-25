@@ -1,4 +1,3 @@
-import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import {
   useAccountDeriveBalancesAll,
@@ -19,7 +18,7 @@ const Balance = () => {
   return formattedBalance ? (
     <section>
       <Text  size="xl">
-        <span>{formattedBalance.value}</span>
+        <span>12580.{formattedBalance.value}</span>
         <span>{formattedBalance.unit}</span>
       </Text >
     </section>
@@ -27,3 +26,4 @@ const Balance = () => {
 };
 
 export { Balance };
+
