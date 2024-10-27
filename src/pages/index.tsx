@@ -11,6 +11,7 @@ const routes = [
   { path: "/usuario", Page: Perfil },
   {path: "/subastalo", Page:Subastalo},
   { path: "/", Page: Login }
+
 ];
 
 function Routing() {

@@ -18,7 +18,7 @@ type Props = {
 
 function Header({isAccountVisible}: Props): JSX.Element {
   return (
-    <header className=' '>
+    <header className=''>
       
       {
       isAccountVisible && <MultiWallet/>

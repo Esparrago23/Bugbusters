@@ -2,7 +2,6 @@ import { HStack } from "@chakra-ui/react";
 import { useAccount } from "@gear-js/react-hooks";
 import { Button } from "@gear-js/ui";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { AccountButton } from "../account-button";
 import { AccountsModal } from "../accounts-modal";
 import { Balance } from "../balance";
@@ -11,7 +10,6 @@ const MultiWallet = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const navigate = useNavigate()
   const openModal = () => {
     setIsModalOpen(true);
   }
