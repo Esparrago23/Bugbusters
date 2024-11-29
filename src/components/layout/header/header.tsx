@@ -1,12 +1,10 @@
 import { MultiWallet } from '@/features/multiwallet/ui/wallet';
-import styles from './header.module.scss';
-import { Logo } from './logo';
 
 type Props = {
   isAccountVisible: boolean;
 };
 
-export function Header({ isAccountVisible }: Props) {
+/*export function Header({ isAccountVisible }: Props) {
   // const [isMenuOpen] = React.useState(false);
 
   return (
@@ -15,6 +13,18 @@ export function Header({ isAccountVisible }: Props) {
       {isAccountVisible && <MultiWallet/>}
     </header>
   );
+}*/
 
-  
+
+function Header({isAccountVisible}: Props): JSX.Element {
+  return (
+    <header className=' '>
+      
+      {
+      isAccountVisible && <MultiWallet/>
+      }
+    </header>
+  );
 }
+export { Header };
+

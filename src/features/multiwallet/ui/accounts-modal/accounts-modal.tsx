@@ -1,18 +1,17 @@
-import { decodeAddress } from "@gear-js/api";
+import { Heading } from "@/components/ui/heading";
+import { Card, HStack } from "@chakra-ui/react";
 import { useAccount, useAlert } from "@gear-js/react-hooks";
 import { Button, Modal, buttonStyles } from "@gear-js/ui";
-import type { InjectedAccountWithMeta } from "@polkadot/extension-inject/types";
 import { isWeb3Injected } from "@polkadot/extension-dapp";
-import SimpleBar from "simplebar-react";
-import { AiOutlineLogout, AiOutlineCopy } from "react-icons/ai";
-import { AccountButton } from "../account-button";
-import { useWallet } from "../../hooks";
-import { WALLETS } from "../../consts";
-import { Card, HStack, Image, VStack } from "@chakra-ui/react";
-import { Heading } from "@/components/ui/heading";
+import type { InjectedAccountWithMeta } from "@polkadot/extension-inject/types";
 import cx from "clsx";
+import { AiOutlineLogout } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import SimpleBar from "simplebar-react";
+import { WALLETS } from "../../consts";
+import { useWallet } from "../../hooks";
+import { AccountButton } from "../account-button";
 import styles from "./accounts-modal.module.scss";
-
 type Props = {
   close: () => void;
 };
@@ -33,13 +32,14 @@ const AccountsModal = ({ close }: Props) => {
   const handleLogoutClick = () => {
     logout();
     close();
+    navigate("/")
   };
 
   const handleAccountClick = (newAccount: InjectedAccountWithMeta) => {
     login(newAccount);
     close();
   };
-
+  const navigate = useNavigate()
   const heading = wallet ? "Connect account" : "Choose Wallet";
   const modalClassName = cx(styles.modal, !isWeb3Injected && styles.empty);
 
@@ -61,8 +61,11 @@ const AccountsModal = ({ close }: Props) => {
       );
 
       return (
-        <li key={id} style={{ marginBottom: '20px' }}>
-          <button className={buttonClassName} onClick={() => setWalletId(id)}>
+        <li className="" key={id} style={{ marginBottom: '20px' }}>
+          <button className={buttonClassName} onClick={() =>{setWalletId(id)
+           
+          }
+         }>
             <span>
               <img src={image} alt={name} width="30" height="30" />
               <p>{name}</p>
@@ -88,6 +91,7 @@ const AccountsModal = ({ close }: Props) => {
       const handleClick = () => {
         if (isActive) return;
         handleAccountClick(_account);
+        navigate("/home")
       };
 
       return (
@@ -159,3 +163,4 @@ const AccountsModal = ({ close }: Props) => {
 };
 
 export { AccountsModal };
+
